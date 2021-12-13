@@ -7,9 +7,12 @@
     "prepare": "husky install",
     "start:dev": "nodemon",
     "start:prod": "node ./dist/src/index.js",
+    "build": "tsc -p tsconfig.prod.json",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "test": "mocha"
+    "test": "mocha",
+    "test:watch": "",
+    "test:coverage": ""
   },
   "author": "Mohamed Waheed",
   "license": "ISC",

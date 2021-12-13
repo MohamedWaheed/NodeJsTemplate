@@ -1,0 +1,1 @@
+1. run `node -v > .nvmrc` to fix the nodejs version used
