@@ -1,0 +1,31 @@
+{
+  "name": "nodejs-template",
+  "version": "1.0.0",
+  "description": "NodeJs dev environment and pipeline",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "start:dev": "nodemon",
+    "start:prod": "node ./dist/src/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "mocha"
+  },
+  "author": "Mohamed Waheed",
+  "license": "ISC",
+  "devDependencies": {
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "nodemon": "^2.0.15"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
