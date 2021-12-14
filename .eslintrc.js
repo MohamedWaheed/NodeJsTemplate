@@ -5,12 +5,16 @@ module.exports = {
         es2021: true
     },
     extends: [
-        "airbnb-base"
+        "eslint:recommended",
+        "airbnb-base",
+        "plugin:import/errors",
+        "plugin:import/warnings"
     ],
     parserOptions: {
         ecmaVersion: 13,
         sourceType: "module"
     },
+    plugins: ["import"],
     rules: {
         quotes: [2, "double"],
         indent: ["error", 4],
@@ -22,6 +26,16 @@ module.exports = {
         "brace-style": ["error", "stroustrup"],
         "no-console": "off",
         "max-classes-per-file": ["error", 2],
-        "max-len": ["error", { code: 150 }]
+        "max-len": ["error", { code: 150 }],
+        "import/order": [
+            "error",
+            {
+                "newlines-between": "never",
+                groups: [
+                    ["builtin", "external"],
+                    ["internal", "parent", "sibling", "index"]
+                ]
+            }
+        ]
     }
 };

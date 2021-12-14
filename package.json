@@ -7,7 +7,7 @@
     "prepare": "husky install",
     "start:dev": "nodemon",
     "start:prod": "node ./dist/src/index.js",
-    "build": "tsc -p tsconfig.prod.json",
+    "build": "",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "test": "mocha",
@@ -32,5 +32,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "dotenv-safe": "^8.2.0"
   }
 }
